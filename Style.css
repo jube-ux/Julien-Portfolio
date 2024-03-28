@@ -1,0 +1,65 @@
+.backgroundimage{
+    background-image: url(./Assets/computer-main\ page\ 2.jpg);
+    background-repeat: repeat-y;
+    height: 2400px;
+    padding-top: 10px;
+    margin: 0%;
+    
+}
+.backgroundimage2{
+    background-image: url(./Assets/clouds-8029036_1920.jpg);
+    height: 140px;
+    margin: 0%;
+}
+#latestpost{
+    height: 800px;
+    width: 800px;
+    margin-left: 600px;
+    margin-top: 200px;
+}
+
+.footer{
+    background-color: grey;
+}
+
+@media (max-width: 992px){
+#latestpost{
+    margin-left:75px;
+    margin-top: 20px;
+}
+}
+.card{
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.541);
+}
+.text1{
+    text-align: center;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text2{
+    border-left: thick solid #ff0000;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(73, 79, 167);
+    font-family: 'Times New Roman', Times, serif;
+}
+.heading1{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(45, 47, 119);
+    font-family: 'Times New Roman', Times, serif;
+}
+.sixtyfour-header {
+    font-family: "Sixtyfour", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "BLED" 20,
+      "SCAN" -40;
+  }

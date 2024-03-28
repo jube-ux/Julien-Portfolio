@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Sixtyfour:BLED,SCAN@8,-3&display=swap" rel="stylesheet">
+    <title>Kali Linux</title>
+</head>
+
+<body>
+    <header class="p-3 text-bg-dark backgroundimage2">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="./index.html" class="nav-link px-2 text-white sixtyfour-header ">Home</a></li>
+              <li><a href="./Aboutme.html" class="nav-link px-2 text-white sixtyfour-header">About Me</a></li>
+              <li><a href="#" class="nav-link px-2 text-white sixtyfour-header ">Networking</a></li>
+              <li><a href="./MyEducation.html" class="nav-link px-2 text-white sixtyfour-header"> Resume</a></li>
+              <li><a href="#" class="nav-link px-2 text-white sixtyfour-header">Linux</a></li>
+              <li><a href="#" class="nav-link px-2 text-white sixtyfour-header">Automation</a></li>
+              <li><a href="#" class="nav-link px-2 text-white sixtyfour-header">Cybersecurity</a></li>
+              <li><a href="./contactme.html" class="nav-link px-2 text-white sixtyfour-header">Contact me</a></li>
+            </ul>
+    
+            <form class="col-12 col-lg-center mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </header>
+
+  <section>
+    <div class="backgroundimage">
+      <div class="container" style="width:fit-content; ">
+        <div class="row mx-5 py-5">
+          <div class="col card">
+              <h1>Installing Kali Linux onto my Windows 10<h1>
+          </div>
+      </div>
+    </div>
+    <div class="container" style="width: 700px;">
+        <div class="row py-4">
+          <div class="col text1 card">
+    
+            Instead of doing a dual boot scenario with my Desktop PC using Windows and Linux I'm just going to install a hypervisor and use a virtual machine to use Linux. This allows me to test drive certain Linux <br>distros without having to install it onto my hard drive.
+
+            What's a hypervisor you ask?
+            
+            A hypervisor is software that creates and manages different virtual machines.  <br> <br>So, Virtual Box would be the hypervisor we will install on our Windows 10 machine and use to "virtually" install a Linux OS.
+          
+            <br> <br>Here is the Link for Virtual Box: https://www.virtualbox.org/wiki/Downloads
+          </div>
+      </div>
+
+      <div class="row py-4">
+        <div class="col text1 card">
+          <h2>Step 1 - Installing  oracle VM Virtual box </h2>
+          <img src="./Assets/Kali Linux Screenshot1.png">
+      </div>
+    </div>
+
+    <div class="row py-4">
+      <div class="col text1 card">
+        <h2>Step 2 -Download an image file </h2>
+        Linux distributions or Linux distros have tons of different kinds of operating systems i.e (Ubuntu, Kali, Xubuntu), an image file has the extension .iso 
+        and contains large amounts of data containing all the information for that specific OS. 
+        Chose a file that contains .iso at the end. Start by going to https://www.linux.org/ and downloading the image file of your choice.
+        <video width="680px" height="400px" autoplay>
+          <source src="./Assets/kali Linux Video File.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+  </div>
+
+  <div class="row py-4">
+    <div class="col text1 card">
+      <h2>Step 3-Set up a virtual machine with virtual box </h2>
+      <video width="680px" height="400px" autoplay>
+        <source src="./Assets/kali Linux Video File2.mp4" type="video/mp4">
+      </video>
+  </div>
+</div>
+
+<div class="row py-4">
+  <div class="col text1 card">
+    <h2>Notes:</h2>
+
+    When I finished downloading the virtual machine, Kali did not want to boot, it simply gave me a black screen and a flashing cursor. To fix this I had to do a little research online but I finally got it. I started by making sure Virtualization was enabled on my Windows machine, then I reinstalled kali linux from the .iso file.
+    
+    Then I went into the command prompt using administrator privileges and entered the following:
+    
+    bcdedit /set hypervisorlaunchtype off
+    
+    Reboot your computer and try to boot Kali from the hypervisor. This is a common issue with lots of help online. Windows has its own hypervisor configuration that is enabled at bootup, but Virtual Box is in conflict with this so it is best to turn it off.
+  </div>
+</div>
+
+
+ 
+
+  </div>
+         
+  </div>
+          
+    </section>
+
+    <section class="footer">
+        <div class="container">
+          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-0">
+            <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+        
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+              <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+        
+            <ul class="nav col-md-4 justify-content-end">
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            </ul>
+          </footer>
+        </div>
+      </section>
+</body>
+</html>
