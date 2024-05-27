@@ -7,9 +7,17 @@
     
 }
 .backgroundimage2{
-    background-image: url(./Assets/clouds-8029036_1920.jpg);
-    height: 160px;
-    margin: 0%;
+    @media (max-width: 575.98px){
+        background-image: url(./Assets/clouds-8029036_1920.jpg);
+        height: 200px;
+        margin: 0%;
+    }
+    @media (min-width: 575.98px){
+        background-image: url(./Assets/clouds-8029036_1920.jpg);
+        height: 100px;
+        margin: 0%;
+    }
+    
 }
 #latestpost{
     height: 800px;
@@ -55,11 +63,23 @@
     font-family: 'Times New Roman', Times, serif;
 }
 .sixtyfour-header {
-    font-family: "Sixtyfour", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "BLED" 20,
-      "SCAN" -40;
+    @media (max-width: 575.98px) { 
+        font-family: "Sixtyfour", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 11px;
+        font-variation-settings:
+            "BLED" 20,
+            "SCAN" -40;
+     }
+     @media (min-width: 575.98px){
+        font-family: "Sixtyfour", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+          "BLED" 20,
+          "SCAN" -40;
+     }
   }
