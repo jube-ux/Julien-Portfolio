@@ -1,7 +1,7 @@
 .backgroundimage{
     background-image: url(./Assets/computer-main\ page\ 2.jpg);
     background-repeat: repeat-y;
-    height: 2400px;
+    /* height: 2400px; */
     padding-top: 10px;
     margin: 0%;
     
