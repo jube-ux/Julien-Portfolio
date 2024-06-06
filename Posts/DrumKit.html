@@ -37,7 +37,7 @@
       </header>
 
       <section>
-        <div class="backgroundimage" style="height: 1117px;">
+        <div class="backgroundimage" style="height: auto;">
           <div class="container" style="width:fit-content; ">
             <div class="row mx-5 py-5">
               <div class="col card">
@@ -50,77 +50,97 @@
               <div class="col text1 card">
         
                 <h2>Based On The Complete 2024 Web Development Bootcamp </h2><br><br>
-                Wireshark can do many things when it comes to analyzing network traffic. But here's a few that will get 
-                you interested about learning about Wireshark. 
+                <img src="../Assets/DrumKitWebScreenshot.JPG"></img>
+                This project will show how I completed the Drum Kit project, that is based on the online full-stack 
+                developer bootcamp: "The Complete 2024 Web Development Bootcamnp" on Udemy. <br><br> I will post the code below with comments
+                and try explain what I did and focus on some concepts. I know this was a fully guided project and not one that I created,
+                which is why I will go into detail explaining what the code means. <br><br>
                 <ul>
-                    <li> 
-                         If you're studying for your Network+ exam that wireshark is a great way to get some 
-                         practical experience working with Wireshark.
-                         So download the app, and what are
-                         are you waiting for?!
-                    </li>
+                    
+                    <li> Here is the link to the Gihut page: <a href="https://jube-ux.github.io/DrumKit/">Click Here</a></li><br>
+                    
                     <li>
-                        If you want to find out if anyone is snooping your network you can easily 
-                        scan your entire network to find out is eavesdropping on your home network.
+                        Some of the code we will focusing on: "For Loops", "Add Event Listeners" and "Switch Statements".<br><br>
                    </li>
                    <li>
-                        Analyze individual packets and frames and deconstruct them to 
-                        potential unencrypt HTTPS traffic, find out if any nodes in your system 
-                        is taking up ressources in your network. 
+                        Follow the step by step guide to complete your own.
                   </li>
                 </ul>
                 <br>
-                <a href="https://www.wireshark.org/">Click here to navigate to the website </a> to download the application and scroll and 
-                find excellent tutorials on how to learn Wireshark and a great community of 
-                fellow networking gurus to guide you through the ocean that is Wireshark. Including their own 
-                YouTube channel!
-                <img src="../Assets/wireshark tutorial image.JPG"> <br>
-                <img src="../Assets/wireshark image youtube channel.JPG">
+                <h2>Step 1: Creating your project</h2>
+                <p>Open your favorite IDE (I'm using VS Code Version 1.89.1) and create a folder for your HTML project. Create files with extensions: ".html", ".css" and ".js"</p>
+                <img src="../Assets/drumKitScreenShot1.JPG"> <br><br>
+                <P>Write the HTML you want your page to look like using a simple background image using CSS and html.
+                  Create 7 image tag and attach drum images ("Kick, snare, tom 1,2,3,4").
+                  Below you can see in my CSS file I have created a css element for each image
+                  and assigned a class selector for each.
+                </P>
+                <img src="../Assets/drumKitScreenShot2.JPG"><br>
+                <P>
+                  In your HTML file (see below), I created a button tag for each image. 
+                  Each image also has 2 classes: "a key" and "drum". (See the CSS file for what these classes look like)<br>
+                  <img src="../Assets/drumKitScreenShot3.JPG">
+                </P>
               </div>
           </div>
     
           <div class="row py-4">
             <div class="col text1 card">
-              <h2>How To Download Wireshark</h2> <br>
-              Navigate to the website and hover over "Get Acquainted and click "Download"
-              Get the latest version and you're off!!!
-              <img src="../Assets/Download Wire shark image.JPG">
-              Once you're able to open the application, it will ask you which network
-              you want to scan. 
-              <img src="../Assets/wireshark scan image.JPG">
-              And once you click your ethernet or wireless adapter it will start
-              scanning right away!
+              <h2>Step 2: Applying Javascript</h2> <br>
+              Using Javascript, whenever you click on the images or hit the corresponding key on
+              your keyboard, it will make the respective sound and flash a darker color.<br><br>
+              <h2>Step 2a.</h2> I will create a "for" loop that will cycle through all the buttons (by selecting their classes), 
+              and adding an event listener to each and output a sound.<br><br>
 
-             
+              <h3 class="text2 ">Wait!! what's an Event Listener</h3>
+              <p class="text2">It's exactly what it sounds like! Here's the basic format:<br><br>
+                addEventListener("click", displayDate);<br><br>
+                By adding the above line of code AFTER whatever element or class or id or document tag you want, 
+                you can trigger something to happen in your webpage: i.e. making a sound when someone click an image or button.
+                It can take 2 parameters, the first one being the event, and the second input is a function that does whatever you
+                want it to do.</p> <br><br>
+                <h2>Step 2b. Adding functions in your for loop</h2> 
+                <p>
+                  One function called is makeSound and the other is ButtonAnimation. 
+                  They both take a parameter called "ButtonInnerHTML" which is the corresponding key.
+                </p>
+                <img src="../Assets/drumKitScreenShot4.jpg"><br><br>
+
+                <h2>Step 2c. Building your functions</h2> 
+                  <p> 
+                    Below is a screenshot of both functions: It uses a switch function that compares one value to different cases. 
+                    Based on the case, it will output an Audio object and play the sound file saved in your project folder.
+                    <img src="../Assets/drumkitSwitchFunction.JPG">
+                  </p>
+
+                  <h3 class="text2 ">Wait!! What's a Switch Statement?!</h3>
+                  <p class="text2">A switch statement if used instead of multiple IF statements, 
+                    It takes one "expression", and compares it to "cases". You can have as many "cases" as you need
+                    Based on which case it matches against, you can make it do "statements".
+
+                    <br><br>
+                    switch("expression"){<br>
+                      case "1": ( "statements" );<br>
+                      break;<br>
+                      case "2": ( "statements" );<br>
+                      break;<br>
+                      default: <br>
+                    }<br>
+             <p>Below is the second function that will output a sound based on a key press on
+              your keyboard. It basically adds a call using ".ClassListAdd" and applies a CSS Class<br>
+              and then calls a delay function and then removed the class with ".ClassListRemove".
+              This flashes the button on and off when the keys are pressed.
+             </p>
+             <img src="../Assets/drumKitScreenShot5.png" alt="">
           </div>
         </div>
     
-        <div class="row py-4">
-          <div class="col text1 card">
-            <h2> Navigating The Application</h2>
-                Once you are in, it can be quite daunting, but never fear! because they're tons
-                of tutorials at your finger tips
-                <img src="../Assets/wireshark intro screen.JPG">
-
-         </div>
-        
-        </div>
     
-        <div class="row py-4">
-          <div class="col text1 card">
-            <h2> Wireshark Series</h2>
-                This post will be an inital gathering and sharing of
-                information about everything Wireshark.
-                Look for new posts about how to navigate Wireshark in depth.
-                Educational content about TCP and UDP network traffic. The OSI model And
-                frames and packets. Also look for post about real-worl applications of Wireshark.
-          </div>
-        </div>
     
             <div class="row py-4">
             <div class="col text1 card">
-                <h2>Notes:</h2>
-            
+                <h2>References:</h2>
+                https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
             </div>
             </div>
     
@@ -128,25 +148,23 @@
      
     
         </div>
-            <section class="footer">
-                <div class="container">
-                  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-0">
-                    <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
-                
-                    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                    </a>
-                
-                    <ul class="nav col-md-4 justify-content-end">
-                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-                    </ul>
-                  </footer>
-                </div>
-              </section>
+        <section class="footer">
+          <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 my-0">
+              <p class="col-md-4 mb-0 text-body-secondary">Julien Saindon's Portfolio</p>
+          
+              <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+              </a>
+          
+              <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="./index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="./Aboutme.html" class="nav-link px-2 text-body-secondary">About me</a></li>
+                <li class="nav-item"><a href="./contactme.html" class="nav-link px-2 text-body-secondary">Contact me</a></li>
+              </ul>
+            </footer>
+          </div>
+        </section>
          </div>         
     </section>
   </body>
