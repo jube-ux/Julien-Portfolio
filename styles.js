@@ -5,7 +5,7 @@
 
 
 $("body > header > div > div > ul > li:nth-child(1) > a").on( "mouseover", function(){
-    $("body > header > div > div > ul > li:nth-child(1) > a").css("background-color", "white");
+    $("body > header > div > div > ul > li:nth-child(1) > a").css("background-color", "gray");
 
 });
 
@@ -73,3 +73,14 @@ $("body > header > div > div > ul > li:nth-child(7) > a").on( "mouseout", functi
     $("body > header > div > div > ul > li:nth-child(7) > a").css("background-color", "");
 
 });
+
+$("body > header > div > div > ul > li:nth-child(8) > a").on( "mouseover", function(){
+    $("body > header > div > div > ul > li:nth-child(8) > a").css("background-color", "gray");
+
+});
+
+$("body > header > div > div > ul > li:nth-child(8) > a").on( "mouseout", function(){
+    $("body > header > div > div > ul > li:nth-child(8) > a").css("background-color", "");
+
+});
+
