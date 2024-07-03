@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to configure my DNS settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Sixtyfour:BLED,SCAN@8,-3&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header class="p-1 text-bg-dark backgroundimage2">
+            <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="../index.html" class="nav-link px-2 text-white sixtyfour-header ">Home</a></li>
+              <li><a href="../Aboutme.html" class="nav-link px-2 text-white sixtyfour-header">About Me</a></li>
+              <li><a href="../NetworkingMenu.html" class="nav-link px-2 text-secondary sixtyfour-header ">Networking</a></li>
+              <li><a href="../MyEducation.html" class="nav-link px-2 text-white sixtyfour-header"> Resume</a></li>
+              <li><a href="../Menus/linuxMenu.html" class="nav-link px-2 text-white sixtyfour-header">Linux</a></li>
+              <li><a href="../coding menu.html" class="nav-link px-2 text-white sixtyfour-header">Coding</a></li>
+              <li><a href="../Menus/cybersecurityMenu.html" class="nav-link px-2 text-white sixtyfour-header">Cybersecurity</a></li>
+              <li><a href="../contactme.html" class="nav-link px-2 text-white sixtyfour-header">Contact me</a></li>
+            </ul>
+    
+            <form class="col-12 col-lg-center mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="backgroundimage">
+          <div class="container" style="width:fit-content; ">
+            <div class="row mx-5 py-5">
+              <div class="col card">
+                  <h1>How to configure my DNS settings<h1>
+              </div>
+          </div>
+        </div>
+        <div class="container" style="width: 700px;">
+            <div class="row py-4">
+              <div class="col text1 card">
+                
+                <br><br>
+                <img src="../Assets/DNS/openart-image_iCnadbvN_1719941645000_raw.png" alt="">
+                Here’s what you’ll see: 
+                <ol>
+                    <li> 
+                        A general overview and DNS.
+                    </li>
+                    <li>
+                        How to find someone to host my website.
+                    </li>
+                    <li>
+                        A record.
+                    </li>
+                     <li>
+                        CNAME record.
+                    </li>
+                    <li>
+                        AAAA record
+                     </li>
+                </ol>
+                <br>
+               <h2>
+                1.	What is DNS?
+                DNS stands for Domain Name System. It’s like your contacts in your phone, but for the internet. When you lookup someone in your phone, you search by their name,<br><br>
+                 and it will give you their phone number. DNS is kind of like this. It will convert a website name to an IP (Internet Protocol) address. <br><br>
+                 Because we need to way to talk to computers, and they need to understand us, in comes DNS. It is like a translator between us and the internet. 
+                It’s like a phonebook, so we need to access that phonebook to lookup a website. First it will look in the “ municipal” phone book, or your local cache. <br><br>
+                Then it will look outwards and go looking further for information. There are lots of steps to DNS, but for now I will only skim the surface of DNS. 
+                
+              </div>
+          </div>
+    
+          <div class="row py-4">
+            <div class="col text1 card">
+                <h2>2.	Hosting your website.</h2>
+                How do I find someone to host my website.
+
+                To create your own website. You need to purchase a domain name (either from GoDaddy, Hostinger, Squarespace etc..). This will allow you to see what’s taken and purchase your own website. And the costs are reasonable. 
+                
+                Then you will need to configure it. But often the configuration is done automatically. But sometimes you need to do it manually. 
+                
+          </div>
+        </div>
+    
+        <div class="row py-4">
+          <div class="col text1 card">
+            <h2> 3.	What is an A record?</h2>
+            A DNS A record (the A stands for address), is the standard way to link an IP to an IPv4 public address.
+             When you login to the place where your site is being hosted (i.e. GoDaddy), you can see what the A record is for your site. 
+            Another word for this is your apex domain which, does not include “www.” the beginning. Below is an example of an A record, using Hostinger:
+            <img src="../Assets/DNS/DNS example.JPG" alt="">
+            <br>
+            Type is: “A record”
+	        Name: “where in your website it will direct to (for example: your main landing page or the root @)<br><br>
+
+	        Content: this is your 32-bit IPv4 public (as opposed to private) <br><br>
+
+	        TTL: this is your time to live. In the above case, it means that the information will be cached by the resolver for 1800 seconds,
+            and then it will query to confirm the information again. <br>
+
+            Sometimes you may have multiple A records that is used for load balancing, but usually there is only one.
+
+
+         </div>
+        
+        </div>
+    
+        <div class="row py-4">
+          <div class="col text1 card">
+            <h2> 4.	What is a CNAME record?</h2>
+            A CNAME or canonical names is like a nickname for your website, also called an alias. <br><br>
+            A CNAME record points to another domain name (not an IP address). <br><br>
+            A CNAME should always point to your main domain name (A record). CNAMES are used to organize large dynamics sites. <br><br>
+            For example, if you site has a blog section, you could configure your site with a CNAME called blog.example.com, or if your site has a store section,
+             you could configure your site with a CNAME store.example.com. Below is an example of a CNAME:<br><br>
+            <img src="../Assets/DNS/DNS CNAME example.JPG" alt=""> <br><br>
+            
+          </div>
+        </div>
+
+
+        <div class="row py-4">
+            <div class="col text1 card">
+              <h2> 5.	What is a “AAAA” record?</h2>
+                 AAAA records are less common but becoming more and more popular. They point to an IPv6 address. Eventually IPv6 is going to become more applicable the more IPv4 get used. 
+                 Below is an example of a AAAA record:
+              <img src="../Assets/DNS/AAAA DNS example.JPG" alt=""> <br><br>
+              
+            </div>
+          </div>
+    
+
+          <div class="row py-4">
+            <div class="col text1 card">
+              <h2>6.Conclusion: Do I need to know DNS? </h2>
+              
+
+              Answer is yes! DNS makes the internet possible. And many connectivity issues arise because of DNS. 
+              “IT’S ALWAYS DNS!” Unless you want to memorize all the 32-bit digits for all your favorite websites. 
+               And bad actors now are using method with DNS to hack their way into systems. So the more you know about DNS, the better informed and ready you’ll be.
+              
+              
+            </div>
+          </div>
+
+
+            <div class="row py-4">
+            <div class="col text1 card">
+                <h2>Notes:</h2>
+                References: https://www.top10.com/hosting/ca-domainhosting-comparison<br><br>
+                Graphics create with openart.ai<br><br>
+                https://support.dnsimple.com/articles/a-record/<br><br>
+                
+            </div>
+            </div>
+    
+    
+     
+    
+        </div>
+            <section class="footer">
+                <div class="container">
+                  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-0">
+                    <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+                
+                    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                
+                    <ul class="nav col-md-4 justify-content-end">
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+                    </ul>
+                  </footer>
+                </div>
+              </section>
+         </div>         
+    </section>
+  </body>
+</html>
