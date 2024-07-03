@@ -3,14 +3,13 @@
 
 
 
-
-$("body > header > div > div > ul > li:nth-child(1) > a").on( "mouseover", function(){
-    $("body > header > div > div > ul > li:nth-child(1) > a").css("background-color", "gray");
+$("#home").on( "mouseover", function(){
+    $("#home").css("background-color", "gray");
 
 });
 
-$("body > header > div > div > ul > li:nth-child(1) > a").on( "mouseout", function(){
-    $("body > header > div > div > ul > li:nth-child(1) > a").css("background-color", "");
+$("#home").on( "mouseout", function(){
+    $("#home").css("background-color", "");
 
 });
 
@@ -83,4 +82,16 @@ $("body > header > div > div > ul > li:nth-child(8) > a").on( "mouseout", functi
     $("body > header > div > div > ul > li:nth-child(8) > a").css("background-color", "");
 
 });
+
+$("#ai").on( "mouseover", function(){
+    $("#ai").css("background-color", "gray");
+
+});
+
+$("#ai").on( "mouseout", function(){
+    $("#ai").css("background-color", "");
+
+});
+
+
 
