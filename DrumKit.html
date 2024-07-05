@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro To WireShark</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Sixtyfour:BLED,SCAN@8,-3&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header class="p-1 text-bg-dark backgroundimage2">
+            <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="../index.html" class="nav-link px-2 text-white sixtyfour-header ">Home</a></li>
+              <li><a href="../Aboutme.html" class="nav-link px-2 text-white sixtyfour-header">About Me</a></li>
+              <li><a href="../Menus/NetworkingMenu.html" class="nav-link px-2 text-white sixtyfour-header ">Networking</a></li>
+              <li><a href="../MyEducation.html" class="nav-link px-2 text-white sixtyfour-header"> Resume</a></li>
+              <li><a href="../Menus/linuxMenu.html" class="nav-link px-2 text-white sixtyfour-header">Linux</a></li>
+              <li><a href="../coding menu.html" class="nav-link px-2 text-secondary sixtyfour-header">Coding</a></li>
+              <li><a href="../Menus/cybersecurityMenu.html" class="nav-link px-2 text-white sixtyfour-header">Cybersecurity</a></li>
+              <li><a href="../contactme.html" class="nav-link px-2 text-white sixtyfour-header">Contact me</a></li>
+            </ul>
+    
+            <!-- 2nd Navigation bar (menus) -->
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="padding-left: 600px;">
+              <li id="ai"><a href="../Menus/ai.html" class="nav-link px-2 text-white sixtyfour-header" >AI</a></li>
+            </ul>
+            
+            <form class="col-12 col-lg-center mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="backgroundimage" style="height: auto;">
+          <div class="container" style="width:fit-content; ">
+            <div class="row mx-5 py-5">
+              <div class="col card">
+                  <h1>Drum Kit Project using Javascript<h1>
+              </div>
+          </div>
+        </div>
+        <div class="container" style="width: 700px;">
+            <div class="row py-4">
+              <div class="col text1 card">
+        
+                <h2>Based On The Complete 2024 Web Development Bootcamp </h2><br><br>
+                <img src="../Assets/DrumKitWebScreenshot.JPG"></img>
+                This project will show how I completed the Drum Kit project, that is based on the online full-stack 
+                developer bootcamp: "The Complete 2024 Web Development Bootcamnp" on Udemy. <br><br> I will post the code below with comments
+                and try explain what I did and focus on some concepts. I know this was a fully guided project and not one that I created,
+                which is why I will go into detail explaining what the code means. <br><br>
+                <ul>
+                    
+                    <li> Here is the link to the Gihut page: <a href="https://jube-ux.github.io/DrumKit/">Click Here</a></li><br>
+                    
+                    <li>
+                        Some of the code we will focusing on: "For Loops", "Add Event Listeners" and "Switch Statements".<br><br>
+                   </li>
+                   <li>
+                        Follow the step by step guide to complete your own.
+                  </li>
+                </ul>
+                <br>
+                <h2>Step 1: Creating your project</h2>
+                <p>Open your favorite IDE (I'm using VS Code Version 1.89.1) and create a folder for your HTML project. Create files with extensions: ".html", ".css" and ".js"</p>
+                <img src="../Assets/drumKitScreenShot1.JPG"> <br><br>
+                <P>Write the HTML you want your page to look like using a simple background image using CSS and html.
+                  Create 7 image tag and attach drum images ("Kick, snare, tom 1,2,3,4").
+                  Below you can see in my CSS file I have created a css element for each image
+                  and assigned a class selector for each.
+                </P>
+                <img src="../Assets/drumKitScreenShot2.JPG"><br>
+                <P>
+                  In your HTML file (see below), I created a button tag for each image. 
+                  Each image also has 2 classes: "a key" and "drum". (See the CSS file for what these classes look like)<br>
+                  <img src="../Assets/drumKitScreenShot3.JPG">
+                </P>
+              </div>
+          </div>
+    
+          <div class="row py-4">
+            <div class="col text1 card">
+              <h2>Step 2: Applying Javascript</h2> <br>
+              Using Javascript, whenever you click on the images or hit the corresponding key on
+              your keyboard, it will make the respective sound and flash a darker color.<br><br>
+              <h2>Step 2a.</h2> I will create a "for" loop that will cycle through all the buttons (by selecting their classes), 
+              and adding an event listener to each and output a sound.<br><br>
+
+              <h3 class="text2 ">Wait!! what's an Event Listener</h3>
+              <p class="text2">It's exactly what it sounds like! Here's the basic format:<br><br>
+                addEventListener("click", displayDate);<br><br>
+                By adding the above line of code AFTER whatever element or class or id or document tag you want, 
+                you can trigger something to happen in your webpage: i.e. making a sound when someone click an image or button.
+                It can take 2 parameters, the first one being the event, and the second input is a function that does whatever you
+                want it to do.</p> <br><br>
+                <h2>Step 2b. Adding functions in your for loop</h2> 
+                <p>
+                  One function called is makeSound and the other is ButtonAnimation. 
+                  They both take a parameter called "ButtonInnerHTML" which is the corresponding key.
+                </p>
+                <img src="../Assets/drumKitScreenShot4.jpg"><br><br>
+
+                <h2>Step 2c. Building your functions</h2> 
+                  <p> 
+                    Below is a screenshot of both functions: It uses a switch function that compares one value to different cases. 
+                    Based on the case, it will output an Audio object and play the sound file saved in your project folder.
+                    <img src="../Assets/drumkitSwitchFunction.JPG">
+                  </p>
+
+                  <h3 class="text2 ">Wait!! What's a Switch Statement?!</h3>
+                  <p class="text2">A switch statement if used instead of multiple IF statements, 
+                    It takes one "expression", and compares it to "cases". You can have as many "cases" as you need
+                    Based on which case it matches against, you can make it do "statements".
+
+                    <br><br>
+                    switch("expression"){<br>
+                      case "1": ( "statements" );<br>
+                      break;<br>
+                      case "2": ( "statements" );<br>
+                      break;<br>
+                      default: <br>
+                    }<br>
+             <p>Below is the second function that will output a sound based on a key press on
+              your keyboard. It basically adds a call using ".ClassListAdd" and applies a CSS Class<br>
+              and then calls a delay function and then removed the class with ".ClassListRemove".
+              This flashes the button on and off when the keys are pressed.
+             </p>
+             <img src="../Assets/drumKitScreenShot5.png" alt="">
+          </div>
+        </div>
+    
+    
+    
+            <div class="row py-4">
+            <div class="col text1 card">
+                <h2>References:</h2>
+                https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+            </div>
+            </div>
+    
+    
+     
+    
+        </div>
+        <section class="footer">
+          <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 my-0">
+              <p class="col-md-4 mb-0 text-body-secondary">Julien Saindon's Portfolio</p>
+          
+              <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+              </a>
+          
+              <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="./index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="./Aboutme.html" class="nav-link px-2 text-body-secondary">About me</a></li>
+                <li class="nav-item"><a href="./contactme.html" class="nav-link px-2 text-body-secondary">Contact me</a></li>
+              </ul>
+            </footer>
+          </div>
+        </section>
+         </div>         
+    </section>
+  </body>
+</html>
