@@ -1,11 +1,31 @@
+
+/* Main page background image */
 .backgroundimage{
-    background-image: url(./Assets/computer-main\ page\ 2.jpg);
+    background-image: url(./Assets/workspace-1280538_1920.jpg);
     background-repeat: repeat-y;
-    /* height: 2400px; */
     padding-top: 10px;
-    margin: 0%;
+    margin: 0%;  
+
+    /* Largr screens (includes 4k) */
+    @media ((min-width: 2000px) and (max-width: 5000px)){
+        background-image: url(./Assets/backgroundImage4k.jpg);
+        background-repeat: repeat-y;
+        padding-top: 10px;
+        margin: 0%;
+    }
+     /* Medium screens */
+    @media ((min-width: 900px) and (max-width: 1930px)) { 
+        background-image: url(./Assets/workspace-1280538_1920.jpg);
+        background-repeat: repeat-y;
+        padding-top: 10px;
+        margin: 0%;
+        height: 3000px;
+        
+    }
     
 }
+
+/* navbar background image and size control */
 .backgroundimage2{
     @media (max-width: 575.98px){
         background-image: url(./Assets/clouds-8029036_1920.jpg);
@@ -76,6 +96,8 @@ ol {
     color: rgb(45, 47, 119);
     font-family: 'Times New Roman', Times, serif;
 }
+
+/* Font style for Navbar */
 .sixtyfour-header {
     @media (max-width: 575.98px) { 
         font-family: "Sixtyfour", sans-serif;
