@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro To WireShark</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Sixtyfour:BLED,SCAN@8,-3&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header class="p-1 text-bg-dark backgroundimage2">
+            <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="../index.html" class="nav-link px-2 text-white sixtyfour-header ">Home</a></li>
+              <li><a href="../Aboutme.html" class="nav-link px-2 text-white sixtyfour-header">About Me</a></li>
+              <li><a href="../Menus/NetworkingMenu.html" class="nav-link px-2 text-white sixtyfour-header ">Networking</a></li>
+              <li><a href="../MyEducation.html" class="nav-link px-2 text-white sixtyfour-header"> Resume</a></li>
+              <li><a href="../Menus/linuxMenu.html" class="nav-link px-2 text-white sixtyfour-header">Linux</a></li>
+              <li><a href="../Menus/coding menu.html" class="nav-link px-2 text-secondary sixtyfour-header">Coding</a></li>
+              <li><a href="../Menus/cybersecurityMenu.html" class="nav-link px-2 text-white sixtyfour-header">Cybersecurity</a></li>
+              <li><a href="../contactme.html" class="nav-link px-2 text-white sixtyfour-header">Contact me</a></li>
+            </ul>
+    
+            <!-- 2nd Navigation bar (menus) -->
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="padding-left: 600px;">
+              <li id="ai"><a href="../Menus/ai.html" class="nav-link px-2 text-white sixtyfour-header" >AI</a></li>
+            </ul>
+            
+            <form class="col-12 col-lg-center mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="backgroundimage" style="height: 10500px;">
+          <div class="container" style="width:fit-content; ">
+            <div class="row mx-5 py-5">
+              <div class="col card">
+                  <h1>How can I extract out information from an HTML login using JavaScript<h1>
+              </div>
+          </div>
+        </div>
+        <div class="container" style="width: 700px;">
+            <div class="row py-4">
+              <div class="col text1 card">
+        
+                <h2>This will be shown using Node.js and Express</h2>
+                <img src="../Assets/NodeJS and Express/loginformMenuIcon.png" alt="">
+                Here’s what you’ll see:
+                <ol>
+                    <li> 
+                      A general overview and explanation of what is Node.js and Express.
+                    </li>
+                    <li>
+                      How to create an HTML login form using Bootstrap.
+                    </li>
+                    <li>
+                      How to get started with Node.js and Express.
+                    </li>
+                    <li>
+                      What the code means.
+                    </li>
+                    <li>
+                      Conclusion.
+                    </li>
+                </ol>
+                <br>
+                In this post, I will show you how to use JavaScript (with the help of Node.js) 
+                to apply backend development to extract login information to
+                check if the right password is right or not.  
+                This post assumes you know how to create an HTML and CSS file and having working knowledge about JavaScript. 
+                
+                <img src="../Assets/NodeJS and Express/Node.js_logo.svg.png"> <br>
+              </div>
+          </div>
+    
+
+          <div class="row py-4">
+            <div class="col text1 card">
+              <h2>1 .A general overview and explanation of what is Node.js and Express.</h2> <br>
+              <h2 class="text2">NODE.JS</h2>
+              The technical explanation for Node.js:  As an asynchronous event-driven JavaScript runtime. 
+              Which doesn’t mean much if you are just starting out learning this but let’s break it down and see what it means. <br><br>
+              What is a runtime environment?<br>
+              A runtime environment is software that allows a programming language to be complied on and understood by the machine.  <br><br>
+              In the past, the only runtime environment was in the browser (because JavaScript was limited to frontend development). 
+              Fast forward to now, Node.js is another type of runtime environment that allows us to use JavaScript anywhere. <br><br>
+              Basically, Node.js allows JavaScript to be used not just on the browser (i.e. on a server, in a browser, as a standalone machine .  
+              You can use JavaScript on the backend and the front end. <br><br>
+
+
+              What does Asynchronous means?<br><br>
+              To understand what Asynchronous means, let’s go over what synchronous means. Asynchronous means the program or application is run line by line and cannot perform the next line without waiting for the previous process to finish. 
+              Asynchronous means that I can be event driven and free up resources, while other code is being processed. 
+              So, what is NPM?
+              NPM which stands for Node Package Manager, works with Node.js and is a place to find code for different backend uses. 
+              For example, we will use NPM to look for our code to parse out information from out login form. <br><br>
+              <h2 class="text2">EXPRESS</h2>
+              So, what’s Express?
+              Express is a framework for node.JS. A framework is simply frequently used, pre-built blocks of code that can be used. For CSS, a common framework is Bootstrap.  Therefore, when you are using the Node.js runtime environment you can use the Express framework. Express is frequently used for web applications, making APIs and Middleware.
+
+          </div>
+        </div>
+    
+        <div class="row py-4">
+          <div class="col text1 card">
+            <h2>2. How to create an HTML login form using Bootstrap.</h2>
+                Create an HTML login form using Bootstrap or whichever framework you prefer.<br><br>
+                Open your favorite IDE and load your project folder and create your best-looking login form with HTML and CSS. 
+                In my case, I’m using bootstrap as a framework (remember Express is a framework also). Basically, 
+                you can go to Bootstrap and copy paste their code so you can use parts of it. But it’s not that simple, 
+                because you will want to modify it so you must understand how bootstrap is linked to your page and how to make changes, otherwise your hands are tied.
+
+                <img src="../Assets/NodeJS and Express/Bootstrap.JPG">
+
+         </div>
+        
+        </div>
+    
+        <div class="row py-4">
+          <div class="col text1 card">
+            <h2> 3.	How to get started with Node.js and Express.</h2><br>
+              Here are both the links for Node.js and Express:  
+              <a href="https://expressjs.com/">Express</a>
+              <a href="https://nodejs.org/en">Node.js</a> <br>
+              These links will provide a "get started" guide to help you install what you need.<bR><bR>
+              
+              Project outlines (What the code means).<br><br>
+              <ol type="a">
+                <li>Create project folder with project.html and project.js</li>
+                <li>Initialize node.js</li>
+                <li>Explanation of the code.</li>
+                <li>Results</li>
+              </ol>
+
+              <ul>
+                <li><u>Step a: Create project folder with project.html and project.js in IDE.</u><br>
+                  Using the terminal or the GUI create a project folder and add an HTML file with your login page, 
+                  create JavaScript file with the extension “.js”.<br><br>
+                </li>
+                <li><u>Step b: Initializing Node.js</u><br>
+                  
+                  By using node.js and Express you must create a server (either on your local host or an external server). 
+                  Start by opening your favorite IDE and opening your JavaScript file.
+                  To use Express, you must first create a JSON file that will load your object file and store your settings. 
+                  Open BASH and type: npm init. (see below)
+                   
+                    <img src="../Assets/NodeJS and Express/Code 2.JPG" alt="">
+                
+                    Using node, you can now start your server by enter this in the terminal: "node example.js"
+                    This will initiate a server on your local machine.<br>
+                    Go your browser and enter this in the URL: localhost: "whatever port you choose".
+                    Once your server is active you should see the below:
+                    <img src="../Assets/NodeJS and Express/open port 3000.JPG" alt="">
+                </li>
+                <li><u>step c. Explanation of the code.</u><br>
+                  After creating your JSON type: npm install body-parser and npm install express.
+                  After this you JSON will be updated, here is what mine looks like:
+                  <img src="../Assets/NodeJS and Express/JSON Image.JPG" alt="" width="600px">
+                  Below is the header of the JavaScript file:
+                  <img src="../Assets/NodeJS and Express/javaImage1header.JPG" alt="" width="600px"><br><br>
+                  Below is the code for the GET and POST requests that are sent and received.
+                  <img src="../Assets/NodeJS and Express/JavaImage2body.JPG" alt="" width="600px"><br><br>
+                  <img src="../Assets/NodeJS and Express/JavascriptPostrequest.JPG" alt="" width="600px">
+                </li><br>
+
+                
+                  <li><u>Step b: Initializing Node.js</u><br>
+                  Based on the above code, the user must input “Welcome1” into the password field.
+                  <img src="../Assets/NodeJS and Express/loginformMAIN.JPG" alt="" width="600px"><br><br>
+                  <img src="../Assets/NodeJS and Express/Results.JPG" alt="" width="600px">
+              </ul>
+
+              5.	Conclusion:
+
+Using the Node.js runtime environment and Express Framework, we can use code from body-parser and use it to extract information the user sends to the server using “req.body”.
+This can create dynamic websites where the user can input certain fields and receive a certain response in return. 
+
+
+          </div>
+        </div>
+    
+            <div class="row py-4">
+            <div class="col text1 card">
+                <h2>Notes:</h2>
+            
+            </div>
+            </div>
+    
+    
+     
+    
+        </div>
+            <section class="footer">
+                <div class="container">
+                  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-0">
+                    <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+                
+                    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                
+                    <ul class="nav col-md-4 justify-content-end">
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+                    </ul>
+                  </footer>
+                </div>
+              </section>
+         </div>         
+    </section>
+  </body>
+</html>
