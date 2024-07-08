@@ -12,6 +12,7 @@
         background-repeat: repeat-y;
         padding-top: 10px;
         margin: 0%;
+        height: 3000px;
     }
      /* Medium screens */
     @media ((min-width: 900px) and (max-width: 1930px)) { 
