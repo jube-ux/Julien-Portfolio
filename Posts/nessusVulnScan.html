@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your First Nessus Vulnerability Scan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Sixtyfour:BLED,SCAN@8,-3&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header class="p-1 text-bg-dark backgroundimage2">
+            <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="../index.html" class="nav-link px-2 text-white sixtyfour-header ">Home</a></li>
+              <li><a href="../Aboutme.html" class="nav-link px-2 text-white sixtyfour-header">About Me</a></li>
+              <li><a href="../NetworkingMenu.html" class="nav-link px-2 text-white sixtyfour-header ">Networking</a></li>
+              <li><a href="../MyEducation.html" class="nav-link px-2 text-white sixtyfour-header"> Resume</a></li>
+              <li><a href="../Menus/linuxMenu.html" class="nav-link px-2 text-white sixtyfour-header">Linux</a></li>
+              <li><a href="../coding menu.html" class="nav-link px-2 text-white sixtyfour-header">Coding</a></li>
+              <li><a href="../Menus/cybersecurityMenu.html" class="nav-link px-2 text-secondary sixtyfour-header">Cybersecurity</a></li>
+              <li><a href="../contactme.html" class="nav-link px-2 text-white sixtyfour-header">Contact me</a></li>
+            </ul>
+    
+            <!-- 2nd Navigation bar (menus) -->
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="padding-left: 600px;">
+              <li id="ai"><a href="../Menus/ai.html" class="nav-link px-2 text-white sixtyfour-header" >AI</a></li>
+            </ul>
+            
+            <form class="col-12 col-lg-center mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="backgroundimage">
+          <div class="container" style="width:fit-content; ">
+            <div class="row mx-5 py-5">
+              <div class="col card">
+                  <h1>How to perform a basic vulnerability scan using Nessus<h1><br>
+                    <img src="../Assets/Nessus/nessus-logo.png" alt=""> <br><br>
+              </div>
+          </div>
+        </div>
+        <div class="container" style="width: 1500px;">
+            <div class="row py-4">
+              <div class="col text1 card">
+        
+                <h2>So what is Nessus anyways?</h2><br><br>
+                    Nessus is an open-source vulnerability scanner that can scan entire networks assets including: virtual machines, hosts, file and web servers, 
+                    and cloud applications. By the use of plugins, it can detect if you system is missing an important security patch or vulnerability,
+                    check if you have malware installed or tell you if  you have any deprecated software that could be exploited. <br><br>
+                <ul>
+                    <li> 
+                         If you're studying for your Security+ exam this is a great way to get some 
+                         practical experience working with a vulnerability scanner.
+                         So download the app, and what are
+                         are you waiting for?!<br><br>
+                    </li>
+                    <li>
+                        In this case, I’ll be using a virtual machine to install Nessus and use it to perform a scan, 
+                        find a vulnerability and correct the issue. Click on this link to find out how to install
+                        <a href="./Kali Linux.html"> Kali Linux</a> <br><br>
+                   </li>
+                   <li>
+                    The installation process for Nessus is a little complex, 
+                    but here is an excellent walkthrough by 
+                    <a href="https://www.youtube.com/watch?v=Gy-aPBb0djk"> David Bombal</a>
+                    on how to install Nessus using Kali Linux. 
+                  </li>
+                </ul>
+          </div>
+    
+    
+        <div class="row py-4">
+          <div class="col text1 card">
+            <h2> Here is what you'll see</h2><br>
+                <ol>
+                    <li>How to start your first scan. </li><br>
+                    <li>How to navigate the results. </li><br>
+                    <li>How to find docs on fixing vulnerability. </li><br>
+                    <li>Fixing the vulnerability with an example. </li><br>
+                </ol>
+
+         </div>
+        
+        </div>
+
+        <div class="row py-4">
+            <div class="col text1 card">
+              <h2> 1. How to start your first scan.</h2> <br>
+              Login the Nessus application to start you first scan,
+               but for Nessus to work you have to go into a terminal and type: sudo systemctl start nessusd<br><br>
+               Once you are logged in and ready to start, go ahead and  click on “new scan”.
+              <img src="../Assets/Nessus/firstScan.JPG"><br>
+              This will prompt  you to enter information about what kind of scan you want (there are numerous different types of scans  like:  
+              basic, advanced, specific types of ransomware and other specific vulnerabilities. 
+              If you are just starting out and looking to test the application, then pick “ Basic Network Scan” <br><br>
+              <img src="../Assets/Nessus/NewScansettings.JPG">
+              <img src="../Assets/Nessus/typesOFscans.JPG" alt=""><br><br>
+              After you click on “Basic Network Scan” you will be asked to input some basic settings and info about your scan. 
+              Enter all the necessary information like, name of the scan, host, website, or entire network. 
+              <img src="../Assets/Nessus/NewScansettings.JPG" alt=""><br><br>
+              You can also enter more advance information, for example: you can set this to a regularly scheduled scan, 
+              send notifications to your email, and set reporting and output options. 
+              Once you are happy with the settings, click on “save” and then “scan”. 
+              This might take a while depending on how large your network or application is.
+              <img src="../Assets/Nessus/types of Scan 2.JPG" alt=""><br><br>
+              Once you are happy with the settings, click on “save” and then “scan”. 
+              This might take a while depending on how large your network or application is.
+          </div>
+        </div>
+    
+        <div class="row py-4">
+          <div class="col text1 card">
+            <h2> 2.	How to navigate the results.</h2>
+            Once the scan is done, below is a screenshot showing all the local hosts on your system and a bar graph 
+            showing what amount of critical, high, medium, low, or informational vulnerabilities you have for each host.
+            <img src="../Assets/Nessus/scanResults.JPG" alt=""><br><br>
+            After clicking on the first host, it will show you what vulnerabilities that hosts currently has. 
+            On the left, it shows more information, such as hosts details, such as your DNS hostname and your IP.
+            <img src="../Assets/Nessus/results.JPG" alt=""><br><br>
+            After clicking on the vulnerability, it will provide you with tons of information about what it is and how to fix it.
+            <img src="../Assets/Nessus/results2.JPG" alt=""><br><br>
+            The first one is an SMB vulnerability that has a “signing not required” setting. 
+            SMB is called the Server Message Block protocol. This service acts like a client-server application and send to and request information on a network and also remote networks. 
+            Once common example is if you have a network printer and wish to send information to that node, it can use SMB to send that data. Earlier versions of SMB were very unsecure and not encrypted meaning that if someone was hiding on your network, the could intercept this data and use it as a MITM (Man in the middle attack).
+            Later versions of SMB required more encryption and digital signing. Digital signing provides non-repudiation, 
+            meaning that this confirms that the data was actually sent by the right person or application and not some “man in the middle” stealing or modifying your data. <br><br>
+            <h3 class="text2">
+                In 2017, an unsecure version of SMB was vulnerable and an exploit was found and 
+                infected 230,000 computer accross 150 countries. This was called the WannaCry ransomware attack.
+            </h3>
+            <img src="../Assets/Nessus/scanSMB.JPG" alt=""><br><br>
+          </div>
+        </div>
+
+        <div class="row py-4">
+            <div class="col text1 card">
+              <h2> 3. How to find docs on fixing vulnerability.</h2> <br>
+              If you are looking for more documentation on where to find a solution or a
+               fix for this vulnerabuility, Nessus provides links for the issue. 
+              <img src="../Assets/Nessus/See Also.JPG" alt=""><br><br>
+          </div>
+        </div>
+
+        <div class="row py-4">
+            <div class="col text1 card">
+              <h2> 4. Fixing the vulnerability with an example. </h2> <br>
+                In order to fix this SMB vulnerability, I have to modify the settings for the SMB service on my host. 
+                You can modify the setting in your Group Policy Editor by typing: gpedit.msc in your run screen, but if you don’t have gpedit installed, you can also modify these settings in your Registry by searching for Regedit. 
+                In this case, I’m simply going to enter regedit and find the security settings for SMB and change the values to 1.
+              <img src="../Assets/Nessus/RegistrySettings.JPG" alt=""><br><br>
+              <img src="../Assets/Nessus/RegistrySettings2.JPG" alt="">
+          </div>
+        </div>
+    
+            <div class="row py-4">
+            <div class="col text1 card">
+                <h2>Notes: https://learn.microsoft.com/en-us/windows-server/storage/file-server/troubleshoot/detect-enable-and-disable-smbv1-v2-v3?tabs=server
+                    https://en.wikipedia.org/wiki/WannaCry_ransomware_attack
+                </h2>
+            
+            </div>
+            </div>
+    
+    
+     
+    
+        </div>
+            <section class="footer">
+                <div class="container">
+                  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-0">
+                    <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+                
+                    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                
+                    <ul class="nav col-md-4 justify-content-end">
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+                    </ul>
+                  </footer>
+                </div>
+              </section>
+         </div>         
+    </section>
+  </body>
+</html>
