@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intercepting Traffic Burp suite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Sixtyfour:BLED,SCAN@8,-3&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header class="p-1 text-bg-dark backgroundimage2">
+            <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="../index.html" class="nav-link px-2 text-white sixtyfour-header ">Home</a></li>
+              <li><a href="../Aboutme.html" class="nav-link px-2 text-white sixtyfour-header">About Me</a></li>
+              <li><a href="../NetworkingMenu.html" class="nav-link px-2 text-white sixtyfour-header ">Networking</a></li>
+              <li><a href="../MyEducation.html" class="nav-link px-2 text-white sixtyfour-header"> Resume</a></li>
+              <li><a href="../Menus/linuxMenu.html" class="nav-link px-2 text-white sixtyfour-header">Linux</a></li>
+              <li><a href="../coding menu.html" class="nav-link px-2 text-white sixtyfour-header">Coding</a></li>
+              <li><a href="../Menus/cybersecurityMenu.html" class="nav-link px-2 text-secondary sixtyfour-header">Cybersecurity</a></li>
+              <li><a href="../contactme.html" class="nav-link px-2 text-white sixtyfour-header">Contact me</a></li>
+            </ul>
+    
+            <!-- 2nd Navigation bar (menus) -->
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="padding-left: 600px;">
+              <li id="ai"><a href="../Menus/ai.html" class="nav-link px-2 text-white sixtyfour-header" >AI</a></li>
+            </ul>
+            
+            <form class="col-12 col-lg-center mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="backgroundimage">
+          <div class="container" style="width:fit-content; ">
+            <div class="row mx-5 py-5">
+              <div class="col card">
+                  <h1>Intro to Burp Suite: Intercepting and modifying Internet Traffic<h1>
+                    <img src="../Assets/Burpsuite/Burpsuite logo.png" alt="">
+              </div>
+          </div>
+        </div>
+        <div class="container paragrahWidth">
+            <div class="row py-4">
+              <div class="col text1 card">
+
+               <!-- ****************below is the first paragraph ********************-->
+                <h2>What is Burp Suite?</h2><br>
+               
+               Burp Suite is an application that gives you all the tools to test and find vulnerabilities in web applications.
+               
+               For example: you can view information sent to specific location (i.e. web application servers), 
+               and modify the information before it is sent. This allows you to find potential bugs in their application, but it 
+               also allows you to learn all about networking and web application security.<br><br>
+                <ul>
+                      <h1> Here's what you'll see </h1><br>
+                    <li> 
+                        <a href="#part1"> How to find Burp Suite and download it. </a> <br><br>
+                    </li>
+                    <li>
+                      <a href="#part2">How to get started with Burp Suite.</a><br><br>
+                    </li>
+                    <li>
+                        <a href="#part3">How to set up your Firefox browser to run with Burp Suite.</a><br><br>
+                   </li>
+                   <li>
+                        <a href="#part4">Analyze HTTPS headers and modify them before they are sent to the servers.</a><br><br>
+                  </li>
+                </ul>
+                <br>
+                
+              </div>
+          </div>
+    
+
+          <div class="row py-4" id="part1">
+            <div class="col text1 card" style="align-content:center;">
+               <!-- ****************below is the secoond paragraph ********************-->
+              <h2>1. How to find Burp Suite</h2> <br>
+              Navigate to the <a href="https://portswigger.net/"> PortSwigger website</a>  create an account
+              and click "Products" and find "Burp Suite Community Edition"
+              <img src="../Assets/Burpsuite/Burpsuite login 1.JPG"><br><br>
+              Once you're in, click "download" and select your OS with whatever settings you need.
+              <img src="../Assets/Burpsuite/Burpsuite login 2.JPG"><br><br>
+              Go through the prompts and this will download the application onto your Desktop
+              <img src="../Assets/Burpsuite/burpsuite wizard 3.JPG" alt="" style="height: 600px; width: 600px; margin-left: 400px;"><br><br>
+              <img src="../Assets/Burpsuite/burpsuite wizard 4.JPG" alt="" style="height: 600px; width: 600px; margin-left: 400px;"><br><br>
+
+             
+          </div>
+        </div>
+    
+        <div class="row py-4" id="part2">
+          <div class="col text1 card">
+             <!-- ****************below is the third paragraph ********************-->
+            <h2> 2. Getting started with Burp suite.</h2><br>
+                Once you have the application download on your Desktop, click on it and get started. 
+                The Burp Suite Community edition gives you limited tools but you are still able to use it for a lot of things.
+                In the first few screens, it will ask you click through a few options, 
+                because this is the Community Edition, it won't let you save your session for future use.
+                Click on "Start Burp" and you will be taken to the dashboard.
+                <img src="../Assets/Burpsuite/burpsuite start 5.JPG" alt="" style="height: 600px; width: 600px; margin-left: 400px;"><br><br>
+                <img src="../Assets/Burpsuite/burpsuite start 6.JPG" alt="" style="height: 600px; width: 600px; margin-left: 400px;"><br><br>
+                Once you are in the main dashboard, this is where we will configure your Firefox browser.
+                Althought there is an embedded browser that you can use. This will get you learning about networking and proxies.
+                <img src="../Assets/Burpsuite/burpsuite main menu 7.JPG" alt=""><br><br>
+                <img src="../Assets/Burpsuite/burpsuite dashboard 8 .JPG" alt=""><br><br>
+
+         </div>
+        
+        </div>
+    
+        <div class="row py-4" id="part3">
+          <div class="col text1 card">
+             <!-- ****************below is the fourth paragraph ********************-->
+            <h2> 3. How to set up your Firefox browser to run with Burp Suite.</h2><br>
+                This section will guide you through setting up your Burp Suite with Firefox.
+                Open you Firefox browser and click on the burger menu and click settings and
+                scroll to the bottom and find "network settings"
+                Set you proxy screen to match the below image.
+                <img src="../Assets/Burpsuite/ProxySettings.JPG" alt="">
+                Now navigate to http://burp/ and this will take you to a site where you can download a certificate that validates PortSwigger 
+                as a legitimate website.
+                Then go to Firefox settings and upload the certificate in the section below: click view Certificates-->import
+                <img src="../Assets/Burpsuite/Certificates1.JPG" alt="">
+                <img src="../Assets/Burpsuite/Certificates2.JPG" alt="">
+                And upload your cerificate and make sure the checkmakr is click on view websites.
+          </div>
+        </div>
+
+        <div class="row py-4" id="part4">
+          <div class="col text1 card">
+             <!-- ****************below is the fifth paragraph ********************-->
+            <h2> 4. Analyze and modify HTTPS headers</h2><br>
+                Once you are in Burp Suite and your firefox browser is set up to allow your local host as a proxy,
+                you can start intercepting traffic. This will be a very simple example of how you can view HTTP headers and modify them.
+                Go the the proxy tab and click on "Interceptor is off" to turn the interceptor on.
+                Now open your Firefox Browser and type in "Google.com"
+                <img src="../Assets/Burpsuite/burpsuite proxy 9 .JPG" alt=""><br><br>
+                This will start populating your Burp Suite with responses and not send them through unless you select them an click foward.
+                <img src="../Assets/Burpsuite/burpsuite proxy 10 .JPG" alt=""><br><br>
+                Go through the responses and find one where the hostname says: "google.com"
+                Then change the language header to: de, this will change the language of google to German
+                <img src="../Assets/Burpsuite/traffic1.JPG" alt=""><br><br>
+                <img src="../Assets/Burpsuite/traffic1.JPG" alt="">
+                If the german google screen doesn't load, just keep fowarding the requests, use the foward all to speed up the process.<br>
+                This is a small example, but in theory this could be used to test different HTTP headers and modify them
+                to test the web application for weaknesses, i.e. changing the request for certain authentication sessions or tokens.
+                which could allow someone to bypass a login screen. 
+
+          </div>
+        </div>
+    
+            <div class="row py-4">
+            <div class="col text1 card">
+               <!-- ****************the below is for notes********************-->
+                <h2>Notes:</h2>
+                https://medium.com/@JAlblas/tryhackme-burp-suite-basics-walkthrough-209ab703d6a1<br>
+                This page is based on the Bug Bounty Bootcamp book by: Vickie Li
+            
+            </div>
+            </div>
+    
+    
+     
+    
+        </div>
+            <section class="footer">
+                <div class="container">
+                  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-0">
+                    <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+                
+                    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                
+                    <ul class="nav col-md-4 justify-content-end">
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+                    </ul>
+                  </footer>
+                </div>
+              </section>
+         </div>         
+    </section>
+  </body>
+</html>
