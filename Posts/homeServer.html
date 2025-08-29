@@ -21,7 +21,7 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li><a href="../index.html" class="nav-link px-2 text-white sixtyfour-header ">Home</a></li>
               <li><a href="../Aboutme.html" class="nav-link px-2 text-white sixtyfour-header">About Me</a></li>
-              <li><a href="../NetworkingMenu.html" class="nav-link px-2 text-secondary sixtyfour-header ">Networking</a></li>
+              <li><a href="../NetworkMenu.html" class="nav-link px-2 text-secondary sixtyfour-header ">Network</a></li>
               <li><a href="../MyEducation.html" class="nav-link px-2 text-white sixtyfour-header"> Resume</a></li>
               <li><a href="../Menus/linuxMenu.html" class="nav-link px-2 text-white sixtyfour-header">Linux</a></li>
               <li><a href="../coding menu.html" class="nav-link px-2 text-white sixtyfour-header">Coding</a></li>
@@ -49,7 +49,7 @@
 
                   <h1>How to set up your home server<h1>
                     <h3>Share files in your own cloud using a home server using OpenMediaVault<h3>
-                    <img src="../Assets/networking/openart-image_HEvvrNbc_1756485171042_raw.png" alt="">
+                    <img src="../Assets/Network/openart-image_HEvvrNbc_1756485171042_raw.png" alt="">
               </div>
           </div>
         </div>
@@ -85,7 +85,7 @@
                    to get the latest version.
 
                 </p>
-                <img src="../Assets/networking/openmediavaultwebsite.png"> <br>
+                <img src="../Assets/Network/openmediavaultwebsite.png"> <br>
               </div>
           </div>
     
@@ -97,7 +97,7 @@
               Find an old pc or laptop that you can use. Then find some Hard Drives laying around
               and make sure they are in good working condition.
               Find a good place to set up your server where you can easily connect an ethernet cable to your server.
-              <img src="../Assets/networking/serverimageproject1.png">
+              <img src="../Assets/Network/serverimageproject1.png">
               You can mix and match HDDs but keep in mind that you will need connection adapters to go from PATA to SATA or IDE to SATA. 
               And also, it's a good idea to change your CMOS battery if the computer is old enough.
           </div>
@@ -110,12 +110,12 @@
                 Once you are all set up with the hardware you can start the installation process.
                 You will need to create a bootable USB drive with the .iso image you downloaded from the OpenMediaVault website.
                 You can use a program like Rufus to create a bootable USB drive.
-                <img src="../Assets/networking/rufus.png " style="height: 650px; width: 500px; margin-left: 400px;">
+                <img src="../Assets/Network/rufus.png " style="height: 650px; width: 500px; margin-left: 400px;">
                 Select the .iso file and the USB drive you want to use and click start.
                 Once the USB drive is created you can plug it into your server and boot from it.
                 Remeber to change the boot order in the BIOS to boot from the USB drive first.
                 Follow the on-screen instructions to install OpenMediaVault on your server.
-              <img src="../Assets/networking/bootMediaUSB.png" style="height: 650px; width: 500px; margin-left: 400px;">
+              <img src="../Assets/Network/bootMediaUSB.png" style="height: 650px; width: 500px; margin-left: 400px;">
          </div>
         
         </div>
@@ -127,18 +127,18 @@
                 Once the installation is complete you can remove the USB drive and reboot your server.
                 You will need to find the IP address of your server to access the web interface.
                 Take a screenshot of the IP address or write it down.
-                <img src="../Assets/networking/screenshot.jpg" alt="">
+                <img src="../Assets/Network/screenshot.jpg" alt="">
                 Open a web browser on your computer and type in the IP address of your server.
                 The default username is "admin" and the default password is "openmediavault".
                 Once you are logged in you can start configuring your server. <br><br>
                 This is what the dashboard looks like:
-                <img src="../Assets/networking/dashboardopenmediavault.png""><br><br>
+                <img src="../Assets/Network/dashboardopenmediavault.png""><br><br>
                 From here you can start setting up your storage, users, and services.
                 You can also install plugins (like Onedrive Synch or Wake on lan) to add more functionality to your server.<br><br>
                 Step 1: Set up your storage<br>
                 Go to Storage > File Systems and you should see your hard drives listed here. (take note that you must have a storage drive other than the one you installed OpenMediaVault on)<br><br>
                 Select the hard drives you want to use and selecte mount new or mount existing.
-                <img src="../Assets/networking/openMediaVaultStorage.png" alt="">
+                <img src="../Assets/Network/openMediaVaultStorage.png" alt="">
                 Once the drives are wiped you can go to Storage > File Systems and create a new file system.
                 Select the drives you want to use and click create.
                 Once the file system is created you can mount it and it will be available for use.<br><br>
@@ -154,13 +154,13 @@
                 On Windows you can map a network drive to your shared folder.
                 On Linux you can use the command line to mount the shared folder.
                 On Mac you can use the Finder to connect to the server.
-                <img src="../Assets/networking/mapNetworkDrive.png" alt=""> <br><br>
+                <img src="../Assets/Network/mapNetworkDrive.png" alt=""> <br><br>
                 Use the format \\IP_ADDRESS\SHAREDFOLDER to connect to your shared folder.
                 You will be prompted to enter the username and password you created earlier.
-                <img src="../Assets/networking/mapdrive.png" alt="">
+                <img src="../Assets/Network/mapdrive.png" alt="">
                 You might need to reboot your computer throughout this process.
                 Once you are connected you can start using your home server to share files and access your data from anywhere.
-                
+
 
 
 
