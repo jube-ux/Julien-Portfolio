@@ -163,3 +163,36 @@ ol {
 .text1 {
     font-family: 'Blinker', sans-serif;
 }
+
+/* Navbar Visibility and Modernity */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8) !important; /* Semi-transparent dark background for better visibility over images */
+  backdrop-filter: blur(5px); /* Modern blur effect for depth */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for elevation */
+  transition: background-color 0.3s ease; /* Smooth transition on scroll if needed */
+}
+
+.nav-link {
+  color: #fff !important; /* Ensure white text */
+  font-weight: 500; /* Bolder for visibility */
+  transition: color 0.3s ease, transform 0.3s ease; /* Modern hover animation */
+}
+
+.nav-link:hover {
+  color: #0d6efd !important; /* Bootstrap primary blue for contrast on hover */
+  transform: scale(1.05); /* Subtle zoom effect */
+  text-decoration: underline; /* Underline for interactivity */
+}
+
+.navbar-brand {
+  font-family: 'Sixtyfour', sans-serif; /* Match your custom font */
+  font-size: 1.5rem; /* Larger for modernity */
+  color: #fff !important;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.9); /* Solid background on mobile menu for visibility */
+    padding: 1rem;
+  }
+}
