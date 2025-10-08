@@ -5,6 +5,7 @@
     background-repeat: repeat-y;
     padding-top: 10px;
     margin: 0%;  
+    height: auto;
 
     /* Largr screens (includes 4k) */
     @media ((min-width: 2000px) and (max-width: 5000px)){
@@ -52,7 +53,9 @@ ol {
     list-style-position: inside;
 }
 
-
+#paragraphWidth{
+    width: 1500px;
+}
 
 #latestpost{
     height: 800px;
@@ -88,7 +91,7 @@ ol {
     border-left: thick solid #ff0000;
     text-align: center;
     font-size: 40px;
-    color: rgb(2, 10, 128);
+    color: rgb(82, 158, 67);
     font-family: 'Times New Roman', Times, serif;
 }
 .heading1{
@@ -121,3 +124,42 @@ ol {
           "SCAN" -20;
      }
   }
+
+  /* Add fade-in animation for search results */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Ensure cards are responsive */
+.post-card {
+    transition: opacity 0.3s ease;
+}
+
+/* Optional: Style the no-results message */
+.alert {
+    margin-top: 1rem;
+}
+
+/* Your existing styles */
+.backgroundimage {
+    background: url('./Assets/background-page 1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.backgroundimage2 {
+    background: url('./Assets/background-page 1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.sixtyfour-header {
+    font-family: 'Sixtyfour', sans-serif;
+}
+
+.text1 {
+    font-family: 'Blinker', sans-serif;
+}
