@@ -38,7 +38,7 @@
             </ul>
 
             <form class="col-12 col-lg-center mb-3 mb-lg-0 me-lg-3" role="search" style="margin-left:90px ;">
-              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" id="searchInput" placeholder="Search posts..." aria-label="Search posts">
             </form>
           </div>
         </div>
@@ -62,11 +62,12 @@
             </div>
           </div>
 
-         <div id= "latestpost" class="container my-0 py-1">
-          <h1>Lastest Posts...</h1>
-          <div class="row py-3">
-            <div class="col-lg-6 py-3">
-              <div class="card" style="width:50px  18rem;">
+         <div id="latestpost" class="container my-0 py-1">
+          <h1>Latest Posts...</h1>
+            <div id="noResults" class="alert alert-warning d-none" role="alert">No posts match your search.</div>
+           <div class="row py-3" id="postContainer">
+            <div class="col-lg-6 py-3 post-card">
+              <div class="card" style="width:22rem;">
                 <a href="/Posts/SIEMSetUp.html"><img src="/Assets/SEIM/image.jpg" class="card-img-top"></a>
                 <div class="card-body">
                   <h5 class="card-title">How to deploy a SIEM and install agents</h5>
@@ -75,9 +76,9 @@
                 </div>
               </div>
             </div>
-              <div class="col-lg-6 py-3">
-                <div class="card" style="width:50px  18rem;">
-                  <a href="./Posts/IntroToWireshark.html"> <img src="Assets/wireshark post image.png" class= "card-img-top alt="..."></a>
+              <div class="col-lg-6 py-3 post-card">
+                <div class="card" style="width:22rem;">
+                  <a href="./Posts/IntroToWireshark.html"> <img src="Assets/wireshark post image.png" class= "card-img-top"></a>
                   <div class="card-body">
                     <h5 class="card-title">Introduction into Wireshark</h5>
                     <p class="card-text">First in a series of posts about wading through the dangerous waters of Wireshark.
@@ -89,9 +90,9 @@
               </div>
           </div>
           <div class="row">
-            <div class="col-lg-6 py-3">
-              <div class="card" style="width: 50px 18rem;">
-                <a href="./Posts/DrumKit.html"> <img src="./Assets/JSDrumKitIcon.png" class="card-img-top" alt="..."></a>
+            <div class="col-lg-6 py-3 post-card">
+              <div class="card" style="width:22rem;">
+                <a href="./Posts/DrumKit.html"> <img src="./Assets/JSDrumKitIcon.png" class="card-img-top"></a>
                 <div class="card-body">
                   <h5 class="card-title">Drum Kit Project</h5>
                   <p class="card-text">How to create a clickable web-based drum kit using Javascript</p>
@@ -99,9 +100,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 py-3">
-              <div class="card" style="width: 50px 18rem;">
-                <a href="./Posts/nmapIntro.html"><img src="./Assets/nmap/nmap icon.JPG" class="card-img-top" style="height: 220px;" alt="..."> </a>
+            <div class="col-lg-6 py-3 post-card">
+              <div class="card" style="width:22rem;">
+                <a href="./Posts/nmapIntro.html"><img src="./Assets/nmap/nmap icon.JPG" class="card-img-top" style="height: 220px;"> </a>
                 <div class="card-body">
                   <h5 class="card-title"> How to get started with NMAP </h5>
                   <p class="card-text">How to check if vulnerable ports are open to incoming connections<br> 
@@ -114,9 +115,9 @@
             </div>
          </div>
          <div class="row">
-          <div class="col-lg-6 py-3">
-            <div class="card" style="width: 50px 18rem;">
-              <a href="./Posts/howToConfigureDNS.html"> <img src="./Assets/DNS/openart-image_iCnadbvN_1719941645000_raw.png" class="card-img-top" alt="..."></a>
+          <div class="col-lg-6 py-3 post-card">
+            <div class="card" style="width: 22rem;">
+              <a href="./Posts/howToConfigureDNS.html"> <img src="./Assets/DNS/openart-image_iCnadbvN_1719941645000_raw.png" class="card-img-top"></a>
               <div class="card-body">
                 <h5 class="card-title">DNS Configuration</h5>
                 <p class="card-text">Click below how to find out to configure DNS for your website</p>
@@ -124,9 +125,9 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 py-3">
-            <div class="card" style="width: 50px 18rem;">
-              <a href="./Menus/ai.html"><img src="./Assets/AI/openart-image_snBwJyvV_1719974290287_raw.jpg" class="card-img-top" alt="..."> </a>
+          <div class="col-lg-6 py-3 post-card">
+            <div class="card" style="width:22rem;">
+              <a href="./Menus/ai.html"><img src="./Assets/AI/openart-image_snBwJyvV_1719974290287_raw.jpg" class="card-img-top"> </a>
               <div class="card-body">
                 <h5 class="card-title"> AI Menu</h5>
                 <p class="card-text">Navigate to the AI menu for the latest posts about Artificial Intelligence</p>
@@ -134,8 +135,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 py-3">
-            <div class="card" style="width: 50px 18rem;">
+          <div class="col-lg-6 py-3 post-card">
+            <div class="card" style="width:22rem;">
               <a href="./Posts/Kali Linux.html"><img src="./Assets/vm kali.PNG" class="card-img-top"></a>  
               <div class="card-body">
                 <h5 class="card-title">Installing Kali Linux onto my Windows 10</h5>
@@ -145,9 +146,9 @@
             </div>
           </div>
 
-          <div class="col-lg-6 py-3">
-            <div class="card" style="width: 50px 18rem;">
-              <img src="../Assets/Burpsuite/Burpsuite logo.png" class="card-img-top" alt="..." style="height: 240px;">
+          <div class="col-lg-6 py-3 post-card">
+            <div class="card" style="width: 22rem;">
+              <img src="../Assets/Burpsuite/Burpsuite logo.png" class="card-img-top" style="height: 240px;">
               <div class="card-body">
                 <h5 class="card-title">How to modify HTTP headers with Burp Suite</h5>
                 <p class="card-text">This will give you an intro to Burp Suite and show you how to view http headers and 
@@ -164,7 +165,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./styles.js"></script>
-</body>
+<script src="./search.js"></script>
 
 <section class="footer">
   <div class="container">
@@ -184,6 +185,6 @@
   </div>
   
 </section>
-
+</body>
 
 </html>
